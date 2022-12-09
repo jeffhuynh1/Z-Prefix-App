@@ -1,19 +1,18 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Context from './Context'
+import Context from './Context';
 
-import Home from './Components/Home'
-import Listpage from './Components/Listpage'
-import Detailspage from './Components/Detailspage'
+import Home from './Components/Home';
+import Listpage from './Components/Listpage';
+import Detailspage from './Components/Detailspage';
 import Footer from './Components/Footer';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
-  const [atHome, setAtHome] = useState(false);
-  const [showAll, setShowAll] = useState(false)
-  const [itemData, setItemData] = useState([])
-  const [userData, setUserData] = useState([])
+  const [showAll, setShowAll] = useState(false);
+  const [itemData, setItemData] = useState([]);
+  const [userData, setUserData] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:8081/items')
@@ -33,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <Context.Provider value={{ loggedIn, setLoggedIn, showAll, setShowAll, itemData , userData , atHome}}>
+      <Context.Provider value={{ loggedIn, setLoggedIn, showAll, setShowAll, itemData , userData }}>
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />

@@ -11,9 +11,13 @@ function Home() {
     let userbox = "";
     let passwordbox = "";
 
-    function guestContinue () {
+    function guestContinue() {
         setShowAll(true);
         navigate('/list');
+    }
+
+    function logOnAttempt() {
+
     }
 
     return (

@@ -8,7 +8,7 @@ exports.up = function(knex) {
         table.string('first_name', 15);
         table.string('last_name', 15);
         table.string('username', 30);
-        table.string('password', 30);
+        table.string('hashedPass', 100);
     })
 };
 

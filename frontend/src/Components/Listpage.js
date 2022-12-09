@@ -10,6 +10,7 @@ function Listpage() {
     const { itemData } = useContext(Context);
     let navigate = useNavigate();
 
+    //shortens strings longer than 100 characters
     function shorten(str) {
         if (str.length > 100) {
             return (str.slice(0, 100) + '...');
@@ -17,6 +18,7 @@ function Listpage() {
         else return (str);
     }
 
+    //creates row for each item
     const itemList = itemData.map((item) =>
         <tr key={item.id} onClick={() => navigate(`/details/${item.id}`)}>
             <td>{item.item_name}</td>

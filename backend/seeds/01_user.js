@@ -7,8 +7,8 @@ exports.seed = async function(knex) {
   await knex.schema.raw('TRUNCATE user_table CASCADE')
   await knex('user_table').del()
   await knex('user_table').insert([
-    {id: 1, first_name: 'Jeff', last_name: 'Huynh', username: 'jeffhuynh1', password: 'password'},
-    {id: 2, first_name: 'Lorenzo', last_name: 'Ross', username: 'Lorenzoross1', password: 'rosslore'},
+    {id: 9998, first_name: 'Jeff', last_name: 'Huynh', username: 'test1', hashedPass: 'test'},
+    {id: 9999, first_name: 'Lorenzo', last_name: 'Ross', username: 'test2', hashedPass: 'test'},
   ]);
 };
 
