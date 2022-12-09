@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+
+/* ------------------header------------------ */
+.Header {
+  height: 90px;
+  background-color: darkslategrey;
+  border-bottom: 1px solid black;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ListHeader .Header h1 {
+  padding-left: 17px;
+}
+
+.ListHeader .Header h4 {
+  padding-left: 6px;
+}
+
+
+.Header h1 {
+  padding-top: 0px;
+  color: white;
+}
+
+.Header h4 {
+  padding-top: 15px;
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* ------------------details page------------------ */
+.description {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* ------------------table------------------ */
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 55%;
+  font-size: small;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #0e6912;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #F2F2F2;
+}
+
+tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* ------------------footer------------------ */
+
+.Footer {
+  margin-top: 30px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Footer h3 {
+  font-size: 12px;
+  font-family: Goudy Old Style;
+}
+
+.FooterLine {
+  height: 3px;
+  width: 1100px;
+  margin: auto;
+  border-radius: 0%;
+  background-color: darkslategrey;
+}
+
+.FooterIcons {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.FooterIcons svg:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
