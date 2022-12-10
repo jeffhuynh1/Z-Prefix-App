@@ -14,11 +14,11 @@ Below you will find the necessary requirements for the CRUD app you will build, 
 ⚪ Submit your CRUD App using this link  by the deadline emailed to you - late submissions will not be graded \
 
 ## Stories
-⚪ As an inventory manager I want to be able to create an account so that I can track my inventory.\
+✅ As an inventory manager I want to be able to create an account so that I can track my inventory.\
     - The user credentials must be salted and hashed before being stored.\
-⚪ As an inventory manager I want to be able to log into my account so that I can see my inventory of items.\
+✅ As an inventory manager I want to be able to log into my account so that I can see my inventory of items.\
     - After logging in, the inventory manager should be redirected to their inventory of items.\
-⚪ As an inventory manager I want to be able to create a new item so that I can share my item details with the world.\
+✅ As an inventory manager I want to be able to create a new item so that I can share my item details with the world.\
     - After the item is created, the inventory manager should be redirected to their inventory of items.\
     - An item displays name, description, and quantity.\
 ✅ As an inventory manager I want to be able to see a my entire inventory of items.\
@@ -34,7 +34,8 @@ Below you will find the necessary requirements for the CRUD app you will build, 
     - The items should only display the first 100 characters of its description with “...” at the end if it is longer than 100 characters.\
 ✅ As a visitor, who is not logged in, I want to be able to view a specific item created by any user so that I can see all of its details.\
     - Unauthenticated users should be able to view all items, and any single item.\
-⚪ As an inventory manager I want to be able to view all items created by every inventory manager so that I can browse every item.\
+✅ As an inventory manager I want to be able to view all items created by every inventory manager so that I can browse every item.\
     - authenticated users should be able to view all items, and any single item.
 
-⚪  --- (stretch) multiple instances of username problem
+
+    -- limits for item adding, name length, css for box size

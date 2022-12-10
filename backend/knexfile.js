@@ -3,6 +3,15 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
+
+
+/*
+const HOST = process.env.DATA_HOST || '127.0.0.1';
+const USER = PROCESS.env.POSTGRES_USER' || 'postgres';
+const PASSWORD
+const DATABASE
+const PORT
+*/
 module.exports = {
 
   development: {
@@ -15,4 +24,11 @@ module.exports = {
       database: "postgres"
     }
   }
+  /*
+  production: {
+    client:
+    connection:
+    
+  }
+   */
 }
