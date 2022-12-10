@@ -6,7 +6,7 @@ import Context from '../Context';
 import Headerhome from './Headerhome';
 
 function Signup() {
-    const { userData } = useContext(Context);
+    const { userData, ApiUrlState } = useContext(Context);
     let navigate = useNavigate();
     let first_name = "";
     let last_name = "";
@@ -30,11 +30,11 @@ function Signup() {
             alert("Please complete all entries");
             return false;
         }
-        if (userData.find(user => user.username.toUpperCase() === userbox.toUpperCase()) != undefined) {
+        if (userData.find(user => user.username.toUpperCase() === userbox.toUpperCase()) !== undefined) {
             alert("Username not available");
             return false;
         }
-        fetch('http://localhost:8081/signup', {
+        fetch(ApiUrlState + '/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             mode: 'cors',
@@ -51,8 +51,8 @@ function Signup() {
             <Headerhome />
             <div>
                 <h3>Sign Up</h3>
-                <div><input className="search-field" type="text" id="firstbox" placeholder="First name" title="Search" onChange={(e) => { last_name = e.target.value }} /></div>
-                <div><input className="search-field" type="text" id="lastbox" placeholder="Last name" title="Search" onChange={(e) => { first_name = e.target.value }} /></div>
+                <div><input className="search-field" type="text" id="firstbox" placeholder="First name" title="Search" onChange={(e) => { first_name = e.target.value }} /></div>
+                <div><input className="search-field" type="text" id="lastbox" placeholder="Last name" title="Search" onChange={(e) => { last_name = e.target.value }} /></div>
                 <div><input className="search-field" type="text" id="userbox" placeholder="Username" title="Search" onChange={(e) => { userbox = e.target.value }} /></div>
                 <div><input className="search-field" type="password" id="passwordbox" placeholder="Password" title="Search" onChange={(e) => { passwordbox = e.target.value }} /></div>
                 <div><input type="checkbox" id="showpassword" onClick={showPassword}></input>Show Password</div>

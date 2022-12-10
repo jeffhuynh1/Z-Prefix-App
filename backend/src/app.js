@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = 8081;
+const PORT = process.env.PORT || 8081;
 const morgan = require("morgan");
 const bcrypt = require("bcrypt");
 const knex = require("./dbConnection")
@@ -14,7 +14,6 @@ app.use(cors());
 //-------------------------LOGIN FUNCTIONS-------------------------
 const { hash, compare } = bcrypt;
 const { createUser, getPasswordHash } = require("./controllers");
-const { request } = require('http');
 
 app.get('/', (req, res) => {
     res.send('Application up and running.')
@@ -130,6 +129,6 @@ app.delete('*', function (req, res) {
     res.status(404).send(`404: You tried deleting in a path that doesn't exist...`);
 });
 
-app.listen(port, () => {
-    console.log(`Successful server spooling on port ${port}, WAHOOOOOO`)
+app.listen(PORT, () => {
+    console.log(`Successful server spooling on port ${PORT}, WAHOOOOOO`)
 })

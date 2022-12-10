@@ -6,7 +6,7 @@ import Context from '../Context';
 import Headerhome from './Headerhome';
 
 function Home() {
-    const { setCurrentUser, userData , setShowAll} = useContext(Context);
+    const { setCurrentUser, userData , setShowAll, ApiUrlState} = useContext(Context);
     let navigate = useNavigate();
     let userbox = "";
     let passwordbox = "";
@@ -14,7 +14,7 @@ function Home() {
     //navigates to list page if logged in
     useEffect(() => {
         if (document.cookie !== "" && document.cookie !=="userloggedin=") navigate('/list')
-    }, [])
+    }, [navigate])
 
     //cookie expiration set up
     var expiry = new Date();
@@ -31,7 +31,7 @@ function Home() {
             alert("Please enter a username and password");
             return false;
         }
-        fetch('http://localhost:8081/login', {
+        fetch(ApiUrlState + '/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             mode: 'cors',

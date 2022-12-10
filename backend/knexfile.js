@@ -4,31 +4,43 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
-
-/*
 const HOST = process.env.DATA_HOST || '127.0.0.1';
-const USER = PROCESS.env.POSTGRES_USER' || 'postgres';
-const PASSWORD
-const DATABASE
-const PORT
-*/
+const USER = process.env.POSTGRES_USER || 'postgres';
+const PASSWORD = process.env.POSTGRES_PASSWORD || 'docker';
+const DATABASE = process.env.POSTGRES_DB || 'postgres';
+const PORT = process.env.PORT || 5432;
+
 module.exports = {
 
   development: {
     client: 'postgresql',
     connection: {
-      host: '127.0.0.1',
-      password: 'docker',
-      user: 'postgres',
-      port: 5432,
-      database: "postgres"
+      host: HOST,
+      user: USER,
+      password: PASSWORD,
+      port: PORT,
+      database: DATABASE
+    },
+    migrations: {
+      directory: './migrations'
+    },
+    seeds: {
+      directory: './seeds'
+    }
+  },
+
+  production: {
+    client: 'postgresql',
+    connection: process.env.DATABASE_URL + '?ssl=no-verify',
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      directory: './migrations'
+    },
+    seeds: {
+      directory: './seeds'
     }
   }
-  /*
-  production: {
-    client:
-    connection:
-    
-  }
-   */
 }

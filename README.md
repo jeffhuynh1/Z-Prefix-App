@@ -4,14 +4,14 @@
 Below you will find the necessary requirements for the CRUD app you will build, as well as user stories that provide you with the desired behavior for your app.
 
 ## Requirements
-⚪ Your application must be deployed and accessible to the public internet\
-⚪ Your code must be made available to instructors for grading (via the submission link at the end of this section)\
+✅ Your application must be deployed and accessible to the public internet\
+✅ Your code must be made available to instructors for grading (via the submission link at the end of this section)\
 ✅ Your application must be compatible with the Google Chrome browser\
 ✅ Your application must use a front-end, back-end, and database\
 ✅ The database should contain at least two entities, a User and a Item, in a one to many relationship, as shown in the ERD below\
 ✅ You should style your application in order to lay out components in a sensible way\
 ✅ You should use the following stories to build out the functionality of your app\
-⚪ Submit your CRUD App using this link  by the deadline emailed to you - late submissions will not be graded \
+✅ Submit your CRUD App using this link  by the deadline emailed to you - late submissions will not be graded \
 
 ## Stories
 ✅ As an inventory manager I want to be able to create an account so that I can track my inventory.\
@@ -39,3 +39,4 @@ Below you will find the necessary requirements for the CRUD app you will build, 
 
 
     -- limits for item adding, name length, css for box size
+    -- redirects for accessing pages that you shouldn't access while not logged in

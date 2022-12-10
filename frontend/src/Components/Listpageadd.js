@@ -6,7 +6,7 @@ import Context from '../Context';
 import Header from './Header';
 
 function Listpageadd() {
-    const { currentUser } = useContext(Context);
+    const { currentUser , ApiUrlState} = useContext(Context);
     let navigate = useNavigate();
 
     let item_name = "";
@@ -30,7 +30,7 @@ function Listpageadd() {
             alert("Please complete all entries");
             return false;
         }
-        fetch('http://localhost:8081/items', {
+        fetch(ApiUrlState + '/items', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             mode: 'cors',
