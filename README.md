@@ -37,6 +37,7 @@ Below you will find the necessary requirements for the CRUD app you will build, 
 ✅ As an inventory manager I want to be able to view all items created by every inventory manager so that I can browse every item.\
     - authenticated users should be able to view all items, and any single item.
 
-
-    -- limits for item adding, name length, css for box size
+### To do
+    -- limits for item adding
+    -- css for user table box size
     -- redirects for accessing pages that you shouldn't access while not logged in
