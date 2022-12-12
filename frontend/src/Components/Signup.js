@@ -30,6 +30,18 @@ function Signup() {
             alert("Please complete all entries");
             return false;
         }
+        if (first_name.length > 15) {
+            alert("first name too long :(");
+            return false;
+        }
+        if (last_name.length > 15) {
+            alert("last name too long :(");
+            return false;
+        }
+        if (last_name.length > 30) {
+            alert("username too long :(");
+            return false;
+        }
         if (userData.find(user => user.username.toUpperCase() === userbox.toUpperCase()) !== undefined) {
             alert("Username not available");
             return false;

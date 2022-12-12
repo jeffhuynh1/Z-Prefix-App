@@ -26,6 +26,14 @@ function Listpageadd() {
             alert("Please complete all entries");
             return false;
         }
+        if (item_name.length > 30) {
+            alert("item name too long :(");
+            return false;
+        }
+        if (description.length > 500) {
+            alert("description too long :(");
+            return false;
+        }
         if (quantity < 1 || isNaN(quantity) || quantity % 1 !== 0) {
             alert("Please enter a valid number for quantity");
             return false;

@@ -101,6 +101,14 @@ function Listpage() {
             alert("Please enter a valid number for quantity");
             return false;
         }
+        if (item_name.length > 30) {
+            alert("item name too long :(");
+            return false;
+        }
+        if (description.length > 500) {
+            alert("description too long :(");
+            return false;
+        }
         fetch(ApiUrlState + `/items/${editTarget}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },

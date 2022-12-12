@@ -38,6 +38,4 @@ Below you will find the necessary requirements for the CRUD app you will build, 
     - authenticated users should be able to view all items, and any single item.
 
 ### To do
-    -- limits for item adding
     -- css for user table box size
-    -- redirects for accessing pages that you shouldn't access while not logged in
