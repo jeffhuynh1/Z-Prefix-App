@@ -22,12 +22,12 @@ function Listpageadd() {
         }
         console.log("data", data)
 
-        if (quantity < 1 || isNaN(quantity) || quantity % 1 !== 0) {
-            alert("Please enter a valid number for quantity");
-            return false;
-        }
         if (item_name.length === 0 || description.length === 0 || quantity.length === 0) {
             alert("Please complete all entries");
+            return false;
+        }
+        if (quantity < 1 || isNaN(quantity) || quantity % 1 !== 0) {
+            alert("Please enter a valid number for quantity");
             return false;
         }
         fetch(ApiUrlState + '/items', {

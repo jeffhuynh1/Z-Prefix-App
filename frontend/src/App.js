@@ -39,8 +39,8 @@ function App() {
 
   useEffect(() => {
     let cookies = cookie.parse(document.cookie)
-    console.log("document cookie: ", document.cookie)
-    console.log("cookies", cookies)
+    // console.log("document cookie: ", document.cookie)
+    // console.log("cookies", cookies)
     if (cookies !== undefined) {
       setCurrentUser(userData.find(user => user.id === parseInt(cookies.userloggedin)))
     }
